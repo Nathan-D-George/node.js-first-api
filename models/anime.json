@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "name": "Darling in the Franxx",
+    "rating": 9.75,
+    "genre": "science-fiction romance"
+  },
+  {
+    "id": 2,
+    "name": "Golden Time",
+    "rating": 9.5,
+    "genre": "romantic-comedy"
+  },
+  {
+    "id": 3,
+    "name": "Rascal Does not Dream",
+    "rating": 9.3,
+    "genre": "science-fiction romance"
+  },
+  {
+    "id": 4,
+    "name": "Sword Art Online",
+    "rating": 9.2,
+    "genre": "action romance"
+  },
+  {
+    "id": 5,
+    "name": "Steins;Gate",
+    "rating": 9.1,
+    "genre": "science-fiction"
+  },
+  {
+    "id": 6,
+    "name": "Masamune's Revenge",
+    "rating": 9.1,
+    "genre": "romance"
+  },
+  {
+    "id": 7,
+    "name": "Love and Lies",
+    "rating": 9.0,
+    "genre": "romance"
+  },
+  {
+    "id": 8,
+    "name": "Clannad",
+    "rating": 9.0,
+    "genre": "romance"
+  },
+  {
+    "id": 9,
+    "name": "Akame ga Kill",
+    "rating": 8.9,
+    "genre": "action"
+  },
+  {
+    "id": 10,
+    "name": "Arifureta",
+    "rating": 8.9,
+    "genre": "action"
+  },
+  {
+    "id": 11,
+    "name": "Astra Lost in Space",
+    "rating": 8.9,
+    "genre": "action mystery"
+  },
+  {
+    "id": 12,
+    "name": "Black Clover",
+    "rating": 8.9,
+    "genre": "action"
+  },
+  {
+    "id": 13,
+    "name": "Hunter x Hunter",
+    "rating": 8.9,
+    "genre": "action"
+  },
+  {
+    "id": 14,
+    "name": "Skakugan no Shana",
+    "rating": 8.9,
+    "genre": "action romance"
+  },
+  {
+    "id": 15,
+    "name": "That Time I Got Reincarnated As a Slime",
+    "rating": 8.9,
+    "genre": "fantasy action"
+  },
+  { "id": 16,
+    "name": "Wiseman's Granchild",
+    "rating": 8.9,
+    "genre": "action romance"
+  },
+  {
+    "id": 17,
+    "name": "Bleach",
+    "rating": 8.8,
+    "genre": "action"
+  },
+  {
+    "id": 18,
+    "name": "Plunderer",
+    "rating": 8.8,
+    "genre": "disappointment action"
+  },
+  {
+    "id": 19,
+    "name": "The Eminence in Shadow",
+    "rating": 8.8,
+    "genre": "action fantasy"
+  }
+]
+
+ 

@@ -4,8 +4,13 @@ const usersDB = {
 }
 
 // const bcrypt = require('bcrypt');
-
 const newSession = async (req, res) => {
+  const session = (req ,res) => {
+    res.json({ "message": "new login html [age"});
+  }
+}
+
+const createSession = async (req, res) => {
   const user = req.body.username;
   const password = req.body.password;
   if (!user || !password) return res.status(400).json({ 'message': 'Username and password are requred' });
@@ -25,4 +30,4 @@ const endSession = async (req, res) => {
   res.json({ 'message': `User ${user} logged out.` });
 }
 
-module.exports = { newSession, endSession };
+module.exports = { newSession, createSession, endSession };

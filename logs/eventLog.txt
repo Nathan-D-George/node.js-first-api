@@ -1,0 +1,10 @@
+20231030	15:12:21,	52ed1172-ae46-4566-ba87-292539737b6c	 GET	undefined	/
+20231030	15:12:21,	6e113042-4778-44d5-ab2b-b39babd60fe9	 GET	undefined	/css/style.css/
+20231030	15:12:32,	458f8a69-eb2f-4f2a-af9b-26388e89830c	 GET	undefined	/about/
+20231030	15:13:54,	fb9e2e0c-e546-40ce-b3e0-125242ae7171	 GET	undefined	/sessions/new
+20231030	15:13:54,	cc5fb362-9e65-42c5-b178-ab1a2f427c0a	 GET	undefined	/sessions/css/style.css
+20231030	15:14:06,	df513ce7-0912-465f-b163-8efa7450b773	 GET	undefined	/sessions/login
+20231030	15:14:06,	65f12157-4e63-4084-9f00-b71b4d296e8d	 GET	undefined	/sessions/css/style.css
+20231030	15:14:42,	2e54e976-bf77-4e72-aee4-0b48093ea508	 GET	undefined	/sessions/new
+20231030	15:30:28,	92e65289-3415-40bb-bd97-d64550b11a24	 GET	undefined	/sessions/login
+20231030	15:30:28,	37eb6c35-ba75-4ef5-afec-bb740607c013	 GET	undefined	/sessions/css/style.css

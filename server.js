@@ -1,20 +1,25 @@
 const express = require('express');
 const app     = express();
 const path    = require('path');
-const errorHandler = require('./middleware/errorHandler');
+const errorHandler  = require('./middleware/errorHandler');
+const { logger }    = require('./middleware/logger');
+
+app.use(logger);
 
 const port = process.env.PORT || 3000;
 
 app.use( express.json() );
 
 /*      add routes here     */
-app.use('/',       express.static(path.join(__dirname, '/public')));
-app.use('/about2', express.static(path.join(__dirname, '/public')));
-app.use('/login',  express.static(path.join(__dirname, '/public')));
+app.use('/',         express.static(path.join(__dirname, '/public')));
+app.use('/about',    express.static(path.join(__dirname, '/public')));
+app.use('/sessions', express.static(path.join(__dirname, '/public')));
+app.use('/shows',    express.static(path.join(__dirname, '/public')));
 
-app.use('/',      require('./routes/rootRoutes' ));
-app.use('/about', require('./routes/aboutRoutes'));
-app.use('/login', require('./routes/sessionRoutes'));
+app.use('/',      require('./routes/rootRoutes' ))  ;  
+app.use('/about', require('./routes/aboutRoutes'))  ;  
+app.use('/login', require('./routes/sessionRoutes')); 
+app.use('/shows', require('./routes/showRoutes'))   ;   
 app.all('*', (req, res) => {
     res.status(404);
     if (req.accepts('html')){
