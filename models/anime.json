@@ -102,12 +102,24 @@
   },
   {
     "id": 18,
-    "name": "Plunderer",
+    "name": "Fruit's Basket",
     "rating": 8.8,
-    "genre": "disappointment action"
+    "genre": "romance"
   },
   {
     "id": 19,
+    "name": "In Search of the Lost Future",
+    "rating": 8.8,
+    "genre": "mystery"
+  },
+  {  
+    "id": 20,  
+    "name": "Plunderer",  
+    "rating": 8.8,  
+    "genre": "disappointment action"  
+  },
+  {
+    "id": 21,
     "name": "The Eminence in Shadow",
     "rating": 8.8,
     "genre": "action fantasy"

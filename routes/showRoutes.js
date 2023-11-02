@@ -1,19 +1,18 @@
-const express = require('express');
-const router  = express.Router();
-const path    = require('path');
-const data    = {};
-
-data.shows = require('../models/anime.json');
-
-// http://localhost:30000/shows/
-router.route('/')
+const express = require('express'); 
+const router  = express.Router(); 
+const path    = require('path'); 
+const data    = {}; 
+const showsController = require('../controllers/showsController'); 
+ 
+data.shows = require('../models/anime.json');  
+ 
+// http://localhost:30000/shows/  
+router.route('/')  
   .get(  (req, res) => {  res.json(data.shows);  })
-  .post( (req, res) => {
-    res.json({
-      "name":   req.body.name,
-      "genre":  req.body.genre,
-      "rating": req.body.rating      
-    });
-  })
+  .post(showsController.createShow)
+  .put(showsController.updateShow)
+  .delete(showsController.deleteShow);
 
-module.exports = router;
+router.route('/:id').get(showsController.getShow);
+
+module.exports = router;   
