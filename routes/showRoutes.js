@@ -8,7 +8,8 @@ data.shows = require('../models/anime.json');
  
 // http://localhost:30000/shows/  
 router.route('/')  
-  .get(  (req, res) => {  res.json(data.shows);  })
+  // .get(  (req, res) => {  res.json(data.shows);  })
+  .get(showsController.listShows)
   .post(showsController.createShow)
   .put(showsController.updateShow)
   .delete(showsController.deleteShow);

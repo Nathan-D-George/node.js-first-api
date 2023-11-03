@@ -32,6 +32,7 @@ app.use('/',      require('./routes/rootRoutes' ))  ;
 app.use('/about', require('./routes/aboutRoutes'))  ;  
 app.use('/login', require('./routes/sessionRoutes'));  
 app.use('/shows', require('./routes/showRoutes'))   ;   
+app.use('/users', require('./routes/userRoutes'))   ;
 app.all('*', (req, res) => { 
     res.status(404); 
     if (req.accepts('html')){ 

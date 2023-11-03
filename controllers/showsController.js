@@ -1,12 +1,15 @@
 const Show = require('../models/Anime');  
   
 const listShows = async (req, res) => {  
-  res.json({  
-      "name":   req.body.name,  
-      "genre":  req.body.genre,  
-      "rating": req.body.rating  
-    }  
-  );  
+  const shows = await Show.find();
+  if (!shows) {
+    return res.status(204).json({ 'message': 'No shows found'});
+  } 
+  try{
+    res.json(shows);
+  } catch(error){
+    console.log(error);
+  }
 }  
 
 const getShow = async (req, res) => { 
