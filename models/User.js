@@ -13,6 +13,13 @@ const userSchema = new Schema({
     password: {
       type: String,
       required: true
+    },
+    roles: {
+      User: {
+        type: Number,
+        default: 100
+      },
+      Admin: Number
     }
   },{
     versionKey: false

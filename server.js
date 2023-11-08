@@ -2,10 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const app     = express();
 const path    = require('path');
+const { logger }    = require( './middleware/logger'   );
 const errorHandler  = require( './middleware/errorHandler' );
+// const verifyJWT     = require( './middleware/verifyJWT');
+const cookieParser  = require( 'cookie-parser');
 const mongoose      = require( 'mongoose' );
 const connectDB     = require( './config/dbConnection' );
-const { logger }    = require( './middleware/logger'   );
+
 const port = process.env.PORT || 3000;
 
 /*      connect to mongo db    */
@@ -22,17 +25,23 @@ app.use(express.urlencoded( { extended: false } ) );
 /*     middleware for json - javascript object notation   */
 app.use( express.json() );
 
+// middleware for cookies
+// app.use(cookieParser);
+
 /*     add routes here     */
 /*  app.use('/',         express.static(path.join(__dirname, '/public')));    */
 app.use('/about',    express.static(path.join(__dirname, '/public'))); 
 app.use('/sessions', express.static(path.join(__dirname, '/public'))); 
 app.use('/shows',    express.static(path.join(__dirname, '/public'))); 
 
-app.use('/',      require('./routes/rootRoutes' ))  ;  
-app.use('/about', require('./routes/aboutRoutes'))  ;  
-app.use('/login', require('./routes/sessionRoutes'));  
-app.use('/shows', require('./routes/showRoutes'))   ;   
+app.use('/',         require('./routes/rootRoutes' ))  ; 
+app.use('/about',    require('./routes/aboutRoutes'))  ; 
+app.use('/auth',     require('./routes/auth'));
+app.use('/sessions', require('./routes/sessionRoutes')); 
+// app.use(verifyJWT);
+app.use('/shows', require('./routes/showRoutes'))   ;  
 app.use('/users', require('./routes/userRoutes'))   ;
+
 app.all('*', (req, res) => { 
     res.status(404); 
     if (req.accepts('html')){ 

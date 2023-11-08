@@ -6,14 +6,14 @@ const showsController = require('../controllers/showsController');
  
 data.shows = require('../models/anime.json');  
  
-// http://localhost:30000/shows/  
+// http://localhost:5000/shows/  
 router.route('/')  
   // .get(  (req, res) => {  res.json(data.shows);  })
-  .get(showsController.listShows)
-  .post(showsController.createShow)
-  .put(showsController.updateShow)
+  .get(   showsController.listShows)
+  .post(  showsController.createShow)
+  .put(   showsController.updateShow)
   .delete(showsController.deleteShow);
 
-router.route('/:id').get(showsController.getShow);
+router.route('/:id').get(showsController.getShow); 
 
-module.exports = router;   
+module.exports = router;    
