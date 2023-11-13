@@ -18,11 +18,10 @@ const createSession = async (req, res) => {
   // const passwordMatches = await bcrypt.compare(password, userFound.password);
   if (password === userFound.password) {
     const roles = Object.values(userFound.roles).filter(Boolean);
-    // res.json({ 'success': `User ${user} is logged in!` });
+
     const accessToken  = jwt.sign( { "username": userFound.username }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' } );
     const refreshToken = jwt.sign( { "username": userFound.username }, process.env.REFRESH_TOKEN_SECRET,{ expiresIn: '1d' } );
     // Save refreshToken with current user
-    // const otherUsers  = usersDB.users.filter(person => person.username !== userFound.username);
 
     res.cookie('jwt', refreshToken, { httpOnly: true, maxAge: 24*60*60*1000 }) ;
     res.json({ accessToken });
@@ -31,7 +30,7 @@ const createSession = async (req, res) => {
     // res.status(401).json({ 'error': `given: ${password}; expected: ${userFound.password}` });
   }
 }  
-   
+
 const endSession = async (req, res) => {
   const user = req.body.firstname;
   res.json({ 'message': `User ${user} logged out.` });

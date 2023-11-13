@@ -3,7 +3,7 @@ const Show = require('../models/Anime');
 const listShows = async (req, res) => {  
   const shows = await Show.find();
   if (!shows) {
-    return res.status(204).json({ 'message': 'No shows found'});
+    return res.status(204).json({ 'message': 'No shows found'}); 
   } 
   try{
     res.json(shows);
@@ -72,6 +72,15 @@ const deleteShow = async (req, res) => {
   res.status(200).json({ 'success': 'Deleted the entry'});
 } 
 
-module.exports = { listShows, getShow, createShow, updateShow, deleteShow };  
+const searchShow = async (req,res) =>{
+  try{
+    const shows = await Show.find( req.query );
+    res.status(200).json({ status:'success',name:shows.name, data:{ shows } });
+  } catch (error){
+    res.sendStatus(400);
+  }
+}
 
+module.exports = { listShows, getShow, createShow, updateShow, deleteShow, searchShow };  
+ 
 

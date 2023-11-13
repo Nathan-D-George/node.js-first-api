@@ -1,6 +1,6 @@
 const express = require('express'); 
 const router  = express.Router(); 
-const path    = require('path'); 
+const path    = require('path');  
 const data    = {}; 
 const showsController = require('../controllers/showsController'); 
  
@@ -13,7 +13,9 @@ router.route('/')
   .post(  showsController.createShow)
   .put(   showsController.updateShow)
   .delete(showsController.deleteShow);
-
+router.route('/search').get(showsController.searchShow);
 router.route('/:id').get(showsController.getShow); 
 
-module.exports = router;    
+
+
+module.exports = router; 

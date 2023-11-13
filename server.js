@@ -38,6 +38,7 @@ app.use('/',         require('./routes/rootRoutes' ))  ;
 app.use('/about',    require('./routes/aboutRoutes'))  ; 
 app.use('/auth',     require('./routes/auth'));
 app.use('/sessions', require('./routes/sessionRoutes')); 
+
 // app.use(verifyJWT);
 app.use('/shows', require('./routes/showRoutes'))   ;  
 app.use('/users', require('./routes/userRoutes'))   ;

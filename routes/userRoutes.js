@@ -17,26 +17,26 @@ router.route('/')
 module.exports = router; 
 
  /*
-  *   God kept me safe when i had appendicitis.
+  *   God kept me safe when i had appendicitis. 
   * 
-  *   God brought me through my driving test when the instructor was fighting to unfairly fail me.
+  *   God brought me through my driving test when the instructor was fighting to unfairly fail me. 
   * 
-  *   God has blessed me to live a healthy life when the doctor's told my parents I would be mentally challenged.
+  *   God has blessed me to live a healthy life when the doctor's told my parents I would be mentally challenged. 
+  *  
+  *   God has brought me through my addiction to foul language. 
   * 
-  *   God has brought me through my addiction to foul language.
+  *   God kept me from being kidnapped in the street as a child. 
   * 
-  *   God kept me from being kidnapped in the street as a child.
+  *   God never let me go even when I was enticed by my lusts. 
   * 
-  *   God never let me go even when I was enticed by my lusts.
+  *   God protected me from a truck driver who fell asleep on the highway. 
   * 
-  *   God protected me from a truck driver who fell asleep on the highway.
+  *   God protected me from encountering someone who trespassed on our property. 
   * 
-  *   God protected me from encountering someone who trespassed on our property.
+  *   God sent His Son, Jesus, to die on the cross for my sins. 
+  *   God has forgiven my sins, and chooses not to bring them up again. 
+  *   God has given me His Holy Spirit to live in me. 
+  *   God has a destiny/purpose for me. To that end He has given me a certain grace. 
   * 
-  *   God sent His Son, Jesus, to die on the cross for my sins.
-  *   God has forgiven my sins, and chooses not to bring them up again.
-  *   God has given me His Holy Spirit to live in me.
-  *   God has a destiny/purpose for me. To that end He has given me a certain grace.
-  * 
-  *   Thank You, GOD!
+  *   Thank You, GOD! 
   */
